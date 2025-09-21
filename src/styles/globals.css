@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Montserrat:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Font utility classes */
+.font-audiowide { font-family: 'Audiowide', sans-serif; }
+.font-montserrat { font-family: 'Montserrat', sans-serif; }
+
+@layer base {
+  :root {
+    /* Light theme - Strict White Background, Black Text */
+    --background: 0 0% 100%;           /* Pure white */
+    --foreground: 0 0% 0%;             /* Pure black */
+    --card: 0 0% 100%;                 /* Pure white */
+    --card-foreground: 0 0% 0%;        /* Pure black */
+    --popover: 0 0% 100%;              /* Pure white */
+    --popover-foreground: 0 0% 0%;     /* Pure black */
+    --primary: 0 0% 0%;                /* Pure black */
+    --primary-foreground: 0 0% 100%;   /* Pure white */
+    --secondary: 0 0% 95%;             /* Very light gray */
+    --secondary-foreground: 0 0% 0%;   /* Pure black */
+    --muted: 0 0% 98%;                 /* Off-white */
+    --muted-foreground: 0 0% 45%;      /* Medium gray */
+    --accent: 0 0% 96%;                /* Light gray accent */
+    --accent-foreground: 0 0% 0%;      /* Pure black */
+    --destructive: 0 84% 60%;          /* Red */
+    --destructive-foreground: 0 0% 100%; /* White */
+    --border: 0 0% 85%;                /* Light gray border */
+    --input: 0 0% 96%;                 /* Light gray input */
+    --ring: 0 0% 0%;                   /* Black focus ring */
+    --radius: 0.5rem;
+
+    /* Sidebar variables */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 0 0% 0%;
+    --sidebar-primary: 0 0% 0%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 96%;
+    --sidebar-accent-foreground: 0 0% 0%;
+    --sidebar-border: 0 0% 85%;
+    --sidebar-ring: 0 0% 0%;
+  }
+
+  .dark {
+    /* Dark theme - Strict Black Background, White Text */
+    --background: 0 0% 0%;             /* Pure black */
+    --foreground: 0 0% 100%;           /* Pure white */
+    --card: 0 0% 0%;                   /* Pure black */
+    --card-foreground: 0 0% 100%;      /* Pure white */
+    --popover: 0 0% 0%;                /* Pure black */
+    --popover-foreground: 0 0% 100%;   /* Pure white */
+    --primary: 0 0% 100%;              /* Pure white */
+    --primary-foreground: 0 0% 0%;     /* Pure black */
+    --secondary: 0 0% 10%;             /* Very dark gray */
+    --secondary-foreground: 0 0% 100%; /* Pure white */
+    --muted: 0 0% 8%;                  /* Near black */
+    --muted-foreground: 0 0% 65%;      /* Light gray */
+    --accent: 0 0% 12%;                /* Dark gray accent */
+    --accent-foreground: 0 0% 100%;    /* Pure white */
+    --destructive: 0 84% 60%;          /* Red */
+    --destructive-foreground: 0 0% 100%; /* White */
+    --border: 0 0% 20%;                /* Dark gray border */
+    --input: 0 0% 12%;                 /* Dark gray input */
+    --ring: 0 0% 100%;                 /* White focus ring */
+
+    /* Dark sidebar variables */
+    --sidebar-background: 0 0% 0%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 0 0% 100%;
+    --sidebar-primary-foreground: 0 0% 0%;
+    --sidebar-accent: 0 0% 12%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 0 0% 20%;
+    --sidebar-ring: 0 0% 100%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  /* CRITICAL: Remove fixed background/color from html */
+  html {
+    color-scheme: light;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  html.dark {
+    color-scheme: dark;
+  }
+
+  /* Let body handle the theming via CSS variables */
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+
+  .container {
+    @apply px-20 md:px-24;
+  }
+}
+
+/* Performance optimization - disable transitions on all elements by default */
+*,
+*::before,
+*::after {
+  transition-property: none;
+}
+
+/* Enable transitions only where needed */
+body,
+.theme-transition,
+[data-theme-transition="true"],
+button,
+.bw-card-hover,
+.skill-card,
+.project-card {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Component styles */
+.skill-card {
+  @apply transition-all duration-300 ease-in-out;
+}
+
+.skill-card:hover {
+  @apply transform -translate-y-1;
+}
+
+.project-card {
+  @apply transition-all duration-300 ease-in-out;
+}
+
+.project-card:hover {
+  @apply transform -translate-y-2 shadow-lg;
+}
+
+/* Updated Neon Glow Effect for B&W theme */
+.neon-glow {
+  text-shadow:
+    0 0 8px currentColor,
+    0 0 16px currentColor,
+    0 0 32px currentColor,
+    0 0 64px currentColor;
+}
+
+/* Metallic Text Effect - B&W version */
+.metallic-text {
+  background: linear-gradient(120deg, 
+    hsl(var(--foreground)) 20%, 
+    hsl(var(--muted-foreground)) 40%, 
+    hsl(var(--foreground)) 60%, 
+    hsl(var(--muted-foreground)) 80%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  filter: brightness(1.2) contrast(1.1);
+}
+
+/* Matrix Flicker Animation */
+.matrix-flicker {
+  animation: flicker 0.12s infinite alternate;
+}
+@keyframes flicker {
+  0% { opacity: 0.7; }
+  100% { opacity: 1; }
+}
+
+/* Progress Bar Animation - B&W version */
+@keyframes progress-bar {
+  0% { width: 0; }
+  100% { width: 100%; }
+}
+
+.progress-bar {
+  height: 12px;
+  background: linear-gradient(90deg, 
+    hsl(var(--foreground)), 
+    hsl(var(--muted-foreground)), 
+    hsl(var(--foreground))
+  );
+  border-radius: 0px;
+  animation: progress-bar 2.5s cubic-bezier(0.4,0,0.2,1) forwards;
+}
+
+/* Smooth Fade/Slide Animations */
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(40px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+.animate-fade-in {
+  animation: fade-in 1s cubic-bezier(0.4,0,0.2,1) forwards;
+}
+
+.logo-float {
+  z-index: 100;
+  transition: transform 0.8s cubic-bezier(0.4,0,0.2,1), opacity 0.8s;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Additional B&W specific styles */
+.bw-gradient-bg {
+  background: linear-gradient(135deg, hsl(var(--background)) 0%, hsl(var(--muted)) 100%);
+}
+
+.bw-card-hover:hover {
+  background: hsl(var(--accent));
+  transform: translateY(-4px);
+}
+
+.bw-border-accent {
+  border: 1px solid hsl(var(--border));
+}
