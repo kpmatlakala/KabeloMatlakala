@@ -1,9 +1,9 @@
 // components/AboutSection.tsx
 "use client";
 
-import React from 'react';
-import { PORTFOLIO_DATA } from '@/lib/constants';
-import { getSkillIcon } from '@/lib/utils';
+import React from "react";
+import { PORTFOLIO_DATA } from "@/lib/constants";
+import { getSkillIcon } from "@/lib/utils";
 
 export function AboutSection() {
   const { skills, testimonials } = PORTFOLIO_DATA;
@@ -14,23 +14,11 @@ export function AboutSection() {
         <div className="grid lg:grid-cols-3 gap-16">
           <div className="lg:col-span-2">
             <div className="mb-12">
-              <h2 className="text-4xl lg:text-5xl font-audiowide mb-8">About Me</h2>
+              <h2 className="text-4xl lg:text-5xl font-audiowide mb-8">
+                About Me
+              </h2>
               <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
-                <p>
-                  I'm a passionate digital designer and developer with over 5 years of experience
-                  creating meaningful digital experiences. My journey began with a fascination for
-                  how design can solve complex problems and create emotional connections.
-                </p>
-                <p>
-                  I specialize in user-centered design, modern web development, and brand identity.
-                  My approach combines strategic thinking with creative execution, always focusing
-                  on delivering measurable results for my clients.
-                </p>
-                <p>
-                  When I'm not designing or coding, you'll find me exploring new technologies,
-                  reading about design philosophy, mentoring junior designers, or working on
-                  personal creative projects.
-                </p>
+                <p>{PORTFOLIO_DATA.profile.bio}</p>
               </div>
             </div>
 
@@ -41,19 +29,36 @@ export function AboutSection() {
                 {skills.map((skill) => {
                   const Icon = getSkillIcon(skill.category);
                   return (
-                    <div key={skill.name} className="group">
+                    <div key={skill.name} className="group border-b-2 border-border pb-4">
                       <div className="flex items-center justify-between mb-3">
                         <div className="flex items-center gap-3">
                           <Icon className="h-5 w-5 text-muted-foreground" />
                           <span className="font-medium">{skill.name}</span>
                         </div>
-                        <span className="text-sm text-muted-foreground">{skill.level}%</span>
+                        <span className="text-sm text-muted-foreground">
+                          {skill.level}%
+                        </span>
                       </div>
                       <div className="w-full bg-muted rounded-full h-2">
                         <div
                           className="bg-foreground h-2 rounded-full transition-all duration-1000 ease-out"
                           style={{ width: `${skill.level}%` }}
                         ></div>
+                      </div>
+
+                      {/* Skills Badges */}
+                      <div className="mt-2 flex flex-wrap gap-2">
+                        {skill.tools.map(
+                          (tool, index) =>
+                            tool && (
+                              <span
+                                key={index}
+                                className="bg-muted text-foreground px-3 py-1 rounded-full text-sm font-medium"
+                              >
+                                {tool}
+                              </span>
+                            )
+                        )}
                       </div>
                     </div>
                   );
@@ -64,16 +69,16 @@ export function AboutSection() {
 
           <div className="space-y-12">
             {/* Stats */}
-            <div className="text-center">
+            {/* <div className="text-center">
               <div className="inline-flex items-center justify-center w-20 h-20 bg-foreground text-background rounded-full mb-6">
                 <span className="text-2xl font-bold">5+</span>
               </div>
               <div className="text-6xl font-audiowide mb-4">120%</div>
               <p className="text-muted-foreground max-w-xs mx-auto">
-                Average client satisfaction increase through strategic design solutions
-                and user-centered approach
+                Average client satisfaction increase through strategic design
+                solutions and user-centered approach
               </p>
-            </div>
+            </div> */}
 
             {/* Testimonials */}
             <div className="space-y-8">
@@ -95,7 +100,9 @@ export function AboutSection() {
                       </p>
                       <div>
                         <p className="font-medium">{testimonial.name}</p>
-                        <p className="text-sm text-muted-foreground">{testimonial.role}</p>
+                        <p className="text-sm text-muted-foreground">
+                          {testimonial.role}
+                        </p>
                       </div>
                     </div>
                   </div>

@@ -2,11 +2,11 @@
 export const PORTFOLIO_DATA = {
   profile: {
     name: "Kabelo P. Matlakala",
-    title: "Designing and developing with 2+ years of experience, diving into data and AI.", 
+    title: "Designer and Developer with 2+ years of experience, diving into data and AI.", 
     shortBio: "Digital Designer and Developer",
     bio: "I’m a problem-solver at heart, blending 5+ years of design and full-stack development experience to create memorable digital experiences. As a tech enthusiast, I’m always exploring new tools and challenges—whether it’s building a sleek UI, diving into data, or experimenting with AI. Outside of work, I’m all about learning, sharing, and tackling creative side projects.",
-    profileImage: "/banner1-enh.png",
-    bannerImage: "/banner1-enh.png",
+    profileImage: "uploads/profile1.png",
+    bannerImage: "uploads/banner1-enh.png",
     email: "matlakalakabelo1@gmail.com",
     phone: "+27 (72) 713 8367",
     location: "South Africa | Polokwane",
@@ -19,15 +19,16 @@ export const PORTFOLIO_DATA = {
       { platform: "github", url: "https://github.com/DeLightPlus", label: "GitHub" },
       { platform: "linkedin", url: "https://linkedin.com", label: "LinkedIn" },
       // { platform: "twitter", url: "https://twitter.com", label: "Twitter" },
-      { platform: "email", url: "mailto:matlakalakabelo1@gmail.com", label: "Email" }
+      // { platform: "email", url: "mailto:matlakalakabelo1@gmail.com", label: "Email" }
     ]
   },
 
   skills: [
-    { name: "Frontend Development", level: 95, category: "Development" },
-    { name: "UI/UX Design", level: 90, category: "Design" },
-    { name: "Backend Development", level: 85, category: "Development" },
-    { name: "Project Management", level: 88, category: "Management" }
+    { name: "UI/UX Design", level: 90, category: "Design", tools: ["Figma", "Canva", "MS-PowerPoint"] },
+    { name: "Frontend Development", level: 95, category: "Development", tools: ["React", "Next.js", "Tailwind CSS", "Framer Motion"] },
+    { name: "Backend Development", level: 85, category: "Development", tools: ["Node.js", "Express", "MongoDB"] },
+    { name: "Project Management", level: 88, category: "Management", tools: ["", "Trello", ""] },
+    { name: "DevOps", level: 80, category: "DevOps", tools: ["Docker", "GitHub Actions", "Vercel"] }
   ],
 
   projects: [
