@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import "../styles/globals.css";
 import { ThemeProvider } from "@/contexts/ThemeContext";
 import { cn } from "@/lib/utils";
-import { Header } from "@/components/Header";
+import { Header } from "@/components/Header/Header";
 
 
 export const metadata: Metadata = {

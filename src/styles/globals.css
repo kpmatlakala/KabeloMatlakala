@@ -106,7 +106,7 @@
   }
 
   .container {
-    @apply px-20 md:px-24;
+    @apply px-0 md:px-24;
   }
 }
 

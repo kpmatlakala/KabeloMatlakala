@@ -2,7 +2,7 @@
 // components/Header.tsx
 "use client";
 
-import { ThemeToggle } from "./ToggleTheme";
+import { ThemeToggle } from "../ToggleTheme";
 
 
 export function Header() {
