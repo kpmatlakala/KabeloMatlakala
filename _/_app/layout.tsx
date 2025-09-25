@@ -1,9 +1,14 @@
 import type { Metadata } from "next";
 
+// Import DeLightPlus UI styles
+// import 'delightplus-ui/styles.css';
+import 'delightplus-ui/dist/styles.css';
+
 import "../styles/globals.css";
 import { ThemeProvider } from "@/contexts/ThemeContext";
 import { cn } from "@/lib/utils";
 import { Header } from "@/components/Header/Header";
+import FloatingHeader from "@/components/Header/FloatingHeader";
 
 
 export const metadata: Metadata = {
@@ -20,7 +25,9 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={cn("font-montserrat", "theme-transition")}>
         <ThemeProvider defaultTheme="system" storageKey="ui-theme">
-          <Header />
+          {/* <Header /> */}
+          <FloatingHeader logoFloating />
+          
           <main>{children}</main>
         </ThemeProvider>
       </body>

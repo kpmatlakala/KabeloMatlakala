@@ -24,6 +24,7 @@ import { ExperienceSection } from "@/components/portfolio/ExperienceSection";
 import { ServicesSection } from "@/components/portfolio/ServicesSection";
 import { CTASection } from "@/components/portfolio/CTASection";
 import { Footer } from "@/components/Footer";
+import Navbar from "@/components/Header/FloatingHeader";
 
 export default function HomePage() {
   const [activeProject, setActiveProject] = useState(null);
@@ -196,6 +197,7 @@ export default function HomePage() {
     <div className="min-h-screen bg-background text-foreground">
       {/* Hero Section */}
       <HeroSection />
+
       {/* About Section */}
       <AboutSection />
 
