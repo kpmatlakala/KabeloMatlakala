@@ -43,8 +43,8 @@ export default function FloatingHeader({ logoFloating }: NavbarProps) {
         <div
           className={`transition-all duration-300 ${
             isScrolled
-              ? 'scale-95 bg-background/40 backdrop-blur-md p-1'
-              : 'scale-100'
+              ? 'scale-95 bg-background/40 backdrop-blur-md rounded-full p-2 px-8'
+              : 'scale-100  p-2 px-8'
           }`}
         >
           <div
@@ -62,9 +62,9 @@ export default function FloatingHeader({ logoFloating }: NavbarProps) {
           <div
             className={`${
               isScrolled
-                ? 'bg-background/50 backdrop-blur-md shadow-none shadow-primary/5 px-6 py-2'
-                : 'bg-background/5 backdrop-blur-sm shadow-lg px-7 py-3'
-            } rounded-full border border-border/20 transition-all duration-300`}
+                ? 'bg-background/50 backdrop-blur-md shadow-none shadow-primary/5 px-1 py-2'
+                : 'bg-background/5 backdrop-blur-sm shadow-lg px-2 py-3'
+            } rounded-full border border-border/80 transition-all duration-300`}
           >
             <nav>
               <ul className="flex gap-1">
@@ -87,7 +87,7 @@ export default function FloatingHeader({ logoFloating }: NavbarProps) {
         {/* Right Side Tools */}
         <div className="flex items-center gap-3">
           {/* Theme + Settings + Resume */}
-          <div className="hidden lg:flex items-center gap-3">
+          <div className="hidden lg:flex items-center shadow-lg gap-3 ">
             <ThemeToggle />
 
             {/* <Link href="/settings">

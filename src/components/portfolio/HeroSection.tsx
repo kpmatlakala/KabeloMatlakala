@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import { ArrowRight, Download, ChevronDown } from "lucide-react";
 import { PORTFOLIO_DATA } from "@/lib/constants";
 import { getSocialIcon } from "@/lib/utils";
+import Image from "next/image";
 
 export function HeroSection() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -80,18 +81,20 @@ export function HeroSection() {
         }
       `}
       >
-        <img
+        <Image
           src={
             size === "large"
               ? profile.bannerImage || profile.profileImage
               : profile.profileImage
           }
           alt="Profile"
-          className={`w-full h-full ${
-            size === "large" ? "object-contain" : "object-cover"
-          } grayscale hover:grayscale-0 transition-all duration-700`}
-          loading="lazy"
+          layout="fill" // or "responsive" depending on your container setup
+          objectFit={size === "large" ? "contain" : "cover"}
+          className="grayscale hover:grayscale-0 transition-all duration-700"
+          priority={false} // lazy loading by default unless priority is true
+          sizes="100vw" // optional, helps with responsive loading
         />
+
         <div className="absolute bottom-0 left-0 right-0 p-16 bg-gradient-to-t from-primary-foreground to-transparent"></div>
       </div>
 
@@ -122,7 +125,7 @@ export function HeroSection() {
         Hello
       </h1>
       <h2 className="text-2xl lg:text-3xl xl:text-4xl font-semibold tracking-tight">
-        I'm <span className="text-primary">{profile.name}</span>
+        I&apos;m <span className="text-primary">{profile.name}</span>
       </h2>
 
       <p className="text-lg text-muted-foreground max-w-lg leading-relaxed mx-auto">
@@ -232,7 +235,8 @@ export function HeroSection() {
                   </h1>
 
                   <h2 className="text-2xl lg:text-3xl font-semibold tracking-tight mt-2">
-                    I'm <span className="text-primary">{profile.name}</span>
+                    I&apos;m{" "}
+                    <span className="text-primary">{profile.name}</span>
                   </h2>
 
                   <p className="text-lg text-muted-foreground max-w-lg leading-relaxed">

@@ -166,18 +166,18 @@ button,
 
 /* Updated Neon Glow Effect for B&W theme */
 .neon-glow {
-  text-shadow: 0 0 8px currentColor, 0 0 16px currentColor,
-    0 0 32px currentColor, 0 0 64px currentColor;
+  text-shadow: 0 0 8px hsl(var(--muted-foreground)), 0 0 8px hsl(var(--muted-foreground)),
+    0 0 32px hsl(var(--muted-foreground)), 0 0 64px hsl(var(--muted-foreground));
 }
 
 /* Metallic Text Effect - B&W version */
 .metallic-text {
   background: linear-gradient(
     120deg,
-    hsl(var(--foreground)) 20%,
-    hsl(var(--muted-foreground)) 40%,
-    hsl(var(--foreground)) 60%,
-    hsl(var(--muted-foreground)) 80%
+    hsl(var(--foreground)) 40%,
+    hsl(var(--muted-foreground)) 60%,
+    hsl(var(--foreground)) 80%,
+    hsl(var(--muted-foreground)) 100%
   );
   background-clip: text;
   -webkit-background-clip: text;
