@@ -5,7 +5,7 @@ export default function Document() {
   return (
     <Html lang="en" suppressHydrationWarning>
       <Head>
-        <link rel="icon" type="image/png" href="/uploads/favicon.png?v=2" />
+        {/* <link rel="icon" type="image/png" href="/uploads/favicon.png?v=2" /> */}
         {/* Optional: Apple Touch Icon or Manifest */}
       </Head>
       <body>

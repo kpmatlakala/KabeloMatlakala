@@ -1,7 +1,8 @@
 // components/ThemeToggle.tsx
 "use client";
 
-import { useTheme } from '@/contexts/ThemeContext';
+
+import { useTheme } from 'delightplus-ui';
 import { Moon, Sun, Monitor } from 'lucide-react';
 
 export function ThemeToggle() {
