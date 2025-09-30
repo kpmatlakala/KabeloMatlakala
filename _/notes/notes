@@ -1,0 +1,33 @@
+education: [
+    {
+      id: 1,
+      degree: "BSc in Mathematical Science",
+      institution: "University of Limpopo",
+      duration: "2016 – 2024",
+      location: "Polokwane, South Africa",
+      description: `Graduated with a focus on Computer Science and Applied Mathematics.
+    Developed strong foundations in algorithms, data structures, and programming using C++, Java, and Python.
+    Built projects using JavaScript, HTML, CSS, PHP, and MySQL while strengthening analytical and problem-solving skills.`,
+    },
+    {
+      id: 2,
+      course: "Software Development Learnership (Full-Stack)",
+      institution: "mLab CodeTribe Academy",
+      duration: "March 2024 – March 2025",
+      location: "Polokwane, South Africa",
+      description: `Hands-on training in modern web technologies including React.js, React Native, Node.js, and Express.
+    Built and maintained RESTful APIs, and worked with MySQL, MongoDB, Firebase, and Supabase.
+    Practiced Agile methodologies, collaborated in team-based projects, and used Git for version control.`,
+    },
+    {
+      id: 3,
+      course: "AI for Software Engineering (Python)",
+      institution: "Power Learn Project (PLP) Academy",
+      duration: "July 2022 – December 2022",
+      location: "Remote",
+      description: `Completed a comprehensive track covering Software Engineering Essentials, Python programming, Web Technologies, and Databases — followed by a specialization in AI for Software Engineering.
+        Gained hands-on experience building full-stack applications and machine learning solutions using tools like scikit-learn, pandas, NumPy, and Streamlit.
+        Projects included Iris Classification, MNIST Digit Recognition, Named Entity Recognition, Sentiment Analysis, and data-driven web apps.
+        Strengthened skills in API development, data preprocessing, and deploying interactive AI apps.`,
+    },
+  ]

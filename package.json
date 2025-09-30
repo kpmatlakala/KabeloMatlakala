@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "clsx": "^2.1.1",
-    "delightplus-ui": "^0.1.30",
+    "delightplus-ui": "^0.1.34",
     "lucide-react": "^0.544.0",
     "next": "15.5.3",
     "react": "19.1.0",

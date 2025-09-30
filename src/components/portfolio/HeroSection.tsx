@@ -124,7 +124,7 @@ export function HeroSection() {
       <h1 className="text-4xl lg:text-5xl xl:text-6xl font-audiowide tracking-tight leading-none">
         Hello
       </h1>
-      <h2 className="text-2xl lg:text-3xl xl:text-4xl font-semibold tracking-tight">
+      <h2 className="text-2xl lg:text-4xl xl:text-6xl font-semibold tracking-tight">
         I&apos;m <span className="text-primary">{profile.name}</span>
       </h2>
 
@@ -181,10 +181,10 @@ export function HeroSection() {
     return (
       <section
         id="home"
-        className="relative min-h-screen flex items-center justify-center overflow-hidden px-6 pt-0"
+        className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16"
       >
         <BackgroundPattern />
-        <div className="container mx-auto max-w-7xl relative z-10">
+        <div className="container mx-auto max-w-8xl relative z-10">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className={`${isLoaded ? "animate-fade-in" : "opacity-0"}`}>
               <HeroContent layout="horizontal" />

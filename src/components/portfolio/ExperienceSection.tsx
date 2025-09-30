@@ -1,99 +1,65 @@
 // components/ExperienceSection.tsx
 "use client";
 
-import React from 'react';
-
-const EXPERIENCE_DATA = [
-  {
-    id: 1,
-    company: "Creative Minds",
-    location: "New York, USA",
-    position: "Senior UX Designer",
-    duration: "2022 - Present",
-    type: "Full-time",
-    description: "Lead design initiatives for Fortune 500 clients, managing a team of 5 designers and driving user-centered design processes.",
-    achievements: [
-      "Increased user engagement by 40%",
-      "Led 15+ successful projects",
-      "Mentored junior designers"
-    ]
-  },
-  {
-    id: 2,
-    company: "Innovative Designs Inc",
-    location: "San Francisco, USA",
-    position: "Product Designer",
-    duration: "2020 - 2022",
-    type: "Contract",
-    description: "Designed user-centered digital products for startups and established companies, focusing on conversion optimization.",
-    achievements: [
-      "Launched 8 successful products",
-      "95% client satisfaction rate",
-      "Reduced design-to-dev handoff time by 60%"
-    ]
-  },
-  {
-    id: 3,
-    company: "Visionary Creations Ltd",
-    location: "London, UK",
-    position: "UI Designer",
-    duration: "2018 - 2020",
-    type: "Full-time",
-    description: "Crafted beautiful and functional user interfaces for web and mobile applications with focus on accessibility.",
-    achievements: [
-      "Designed 20+ web applications",
-      "Improved user satisfaction by 35%",
-      "Created design system adopted company-wide"
-    ]
-  }
-];
+import React from "react";
+import { PORTFOLIO_DATA } from "@/lib/constants";
 
 export function ExperienceSection() {
   return (
     <section className="py-16 md:py-24 px-6 bw-gradient-bg">
       <div className="container mx-auto max-w-4xl">
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-audiowide mb-6">Professional Journey</h2>
+          <h2 className="text-4xl lg:text-5xl font-audiowide mb-6">
+            Professional Journey
+          </h2>
           <p className="text-xl text-muted-foreground">
             A timeline of growth, learning, and creative evolution
           </p>
         </div>
 
-        <div className="space-y-12">
-          {EXPERIENCE_DATA.map((job, index) => (
-            <div key={job.id} className="relative pl-8 border-l-2 border-border">
-              <div className="absolute -left-2 top-0 w-4 h-4 bg-foreground rounded-full"></div>
-              
-              <div className="bg-card border border-border rounded-lg p-6 hover:shadow-lg transition-shadow duration-300">
-                <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+        <div className="space-y-12 relative">
+          <div className="absolute left-4 top-0 bottom-0 w-1 bg-border rounded-full"></div>
+
+          {PORTFOLIO_DATA.experience.map((job, index) => (
+            <div key={job.id} className="relative pl-12 md:pl-16">
+              {/* Timeline dot */}
+              <div className="absolute left-2 top-3 w-4 h-4 bg-primary border-4 border-background rounded-full shadow-sm z-10"></div>
+
+              {/* Card */}
+              <div className="bg-card border border-border rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow duration-300">
+                {/* Header Section */}
+                <div className="flex flex-col md:flex-row md:justify-between mb-4 gap-2">
                   <div>
-                    <h3 className="text-xl font-bold mb-1">{job.position}</h3>
-                    <p className="text-lg text-muted-foreground mb-2">{job.company}</p>
-                    <p className="text-sm text-muted-foreground">{job.location}</p>
+                    <h3 className="text-xl font-semibold">{job.position}</h3>
+                    <p className="text-md text-muted-foreground">
+                      {job.company}
+                    </p>
+                    <p className="text-sm text-muted-foreground italic">
+                      {job.location}
+                    </p>
                   </div>
-                  <div className="flex flex-col md:items-end">
-                    <span className="px-3 py-1 bg-accent text-accent-foreground text-sm rounded-full mb-2">
+
+                  <div className="text-right md:text-end">
+                    <span className="inline-block bg-accent text-accent-foreground text-xs font-medium px-3 py-1 rounded-full mb-1">
                       {job.type}
                     </span>
-                    <span className="text-sm text-muted-foreground">{job.duration}</span>
+                    <p className="text-sm text-muted-foreground">
+                      {job.duration}
+                    </p>
                   </div>
                 </div>
-                
-                <p className="text-muted-foreground mb-4 leading-relaxed">
+
+                {/* Description */}
+                <p className="text-sm text-muted-foreground leading-relaxed mb-4">
                   {job.description}
                 </p>
-                
-                <div className="flex flex-wrap gap-2">
+
+                {/* Achievements */}
+                <ul className="list-disc pl-5 space-y-1 text-sm text-muted-foreground">
                   {job.achievements.map((achievement, i) => (
-                    <span
-                      key={i}
-                      className="text-sm text-muted-foreground flex items-center gap-1"
-                    >
-                      <div className="w-1 h-1 bg-muted-foreground rounded-full"></div>
-                      {achievement}
-                    </span>
+                    <li key={i}>{achievement}</li>
                   ))}
-                </div>
+                </ul>
               </div>
             </div>
           ))}

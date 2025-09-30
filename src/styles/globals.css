@@ -115,9 +115,11 @@
   body {
     @apply bg-background text-foreground;
     font-family: "Inter", sans-serif;
+    justify-content: center;
     min-height: 100vh;
+    min-width: 100vw;
     transition: background-color 0.3s ease, color 0.3s ease;
-  }
+  } 
 
   .section-padding {
     @apply py-16 md:py-24;

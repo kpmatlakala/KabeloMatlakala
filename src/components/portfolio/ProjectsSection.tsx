@@ -6,7 +6,7 @@ import { ArrowRight, ExternalLink, Github } from 'lucide-react';
 import { PORTFOLIO_DATA } from '@/lib/constants';
 import { getStatusColor } from '@/lib/utils';
 
-export function PortfolioSection() {
+export function ProjectsSection() {
   const [activeProject, setActiveProject] = useState<number | null>(null);
   const { projects } = PORTFOLIO_DATA;
   
