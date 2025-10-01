@@ -87,8 +87,8 @@ export default function FloatingHeader({ logoFloating }: NavbarProps) {
         {/* Right Side Tools */}
         <div className="flex items-center gap-3">
           {/* Theme + Settings + Resume */}
-          <div className="hidden lg:flex items-center shadow-lg gap-3 ">
-            <ThemeToggle />
+          <div className="hidden rounded-full lg:flex items-center shadow-lg gap-3 ">
+            <ThemeToggle/>
 
             {/* <Link href="/settings">
               <Button variant="ghost" className="flex items-center gap-2">

@@ -1,22 +1,8 @@
+//pages/index.tsx
 "use client";
 
 import React, { useState, useEffect } from "react";
-import {
-  Mail,
-  ArrowRight,
-  Calendar,
-  Github,
-  Linkedin,
-  Twitter,
-  Download,
-  Code,
-  Palette,
-  Zap,
-  Users,
-  ChevronDown,
-  ExternalLink,
-  Play
-} from "lucide-react";
+
 import { HeroSection } from "@/components/portfolio/HeroSection";
 import { AboutSection } from "@/components/portfolio/AboutSection";
 import { ProjectsSection } from "@/components/portfolio/ProjectsSection";
@@ -24,7 +10,7 @@ import { ExperienceSection } from "@/components/portfolio/ExperienceSection";
 import { ServicesSection } from "@/components/portfolio/ServicesSection";
 import { CTASection } from "@/components/portfolio/CTASection";
 import { Footer } from "@/components/Footer";
-import Navbar from "@/components/Header/FloatingHeader";
+
 
 export default function HomePage() {
   const [activeProject, setActiveProject] = useState(null);

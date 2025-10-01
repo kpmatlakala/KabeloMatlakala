@@ -2,7 +2,7 @@
 "use client";
 
 
-import { useTheme } from 'delightplus-ui';
+import { Button, useTheme } from 'delightplus-ui';
 import { Moon, Sun, Monitor } from 'lucide-react';
 
 export function ThemeToggle() {
@@ -21,22 +21,25 @@ export function ThemeToggle() {
   const getIcon = () => {
     switch (theme) {
       case 'light':
-        return <Sun className="h-5 w-5" />;
+        return <Sun className="h-5 w-5" color='black' />;
       case 'dark':
-        return <Moon className="h-5 w-5" />;
+        return <Moon className="h-5 w-5" color='white' />;
       case 'system':
-        return <Monitor className="h-5 w-5" />;
+        return <Monitor className="h-5 w-5" color='white' />;
     }
   };
 
   return (
-    <button
+    <Button
       onClick={toggleTheme}
-      className="flex items-center justify-center w-10 h-10 rounded-lg border border-border bg-background hover:bg-accent hover:text-accent-foreground transition-colors"
+      className="flex items-center justify-center w-10 h-10 rounded-full border border-border bg-background hover:bg-accent hover:text-accent-foreground transition-colors"
       aria-label={`Switch to ${theme === 'light' ? 'dark' : theme === 'dark' ? 'system' : 'light'} mode`}
+      variant="ghost"
+      size="icon"
+      // asChild
     >
       {getIcon()}
-    </button>
+    </Button>
   );
 }
 
