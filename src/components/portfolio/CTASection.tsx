@@ -7,7 +7,8 @@ import { Mail } from 'lucide-react';
 
 export function CTASection() {
   return (
-    <section className="py-16 md:py-24 px-6 bw-gradient-bg">
+    <section id="contact" className="scroll-mt-24 py-16 md:py-24 px-6 bw-gradient-bg">
+
       <div className="container mx-auto max-w-4xl text-center">
         <h2 className="text-4xl lg:text-5xl font-audiowide mb-6">
           Ready to Start Your Project?

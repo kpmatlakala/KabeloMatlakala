@@ -34,7 +34,8 @@ export function ProjectsSection() {
   const displayedProjects = showAll ? sortedProjects : sortedProjects.slice(0, 3);
 
   return (
-    <section className="projects py-16 md:py-24 px-6">
+    <section id="projects" className="scroll-mt-0 py-16 md:py-24 px-6">
+
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-audiowide mb-6">Featured Projects</h2>

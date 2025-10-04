@@ -1,7 +1,6 @@
-//pages/index.tsx
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 import { HeroSection } from "@/components/portfolio/HeroSection";
 import { AboutSection } from "@/components/portfolio/AboutSection";
@@ -10,42 +9,55 @@ import { ExperienceSection } from "@/components/portfolio/ExperienceSection";
 import { ServicesSection } from "@/components/portfolio/ServicesSection";
 import { CTASection } from "@/components/portfolio/CTASection";
 import { Footer } from "@/components/Footer";
-
+import FloatingHeader from "@/components/Header/FloatingHeader";
 
 export default function HomePage() {
-  const [activeProject, setActiveProject] = useState(null);
-  const [scrollY, setScrollY] = useState(0);
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [actualTheme, setActualTheme] = useState('light');
+  const [activeSection, setActiveSection] = useState<string>("home");
 
   useEffect(() => {
-    setIsLoaded(true);
-    const handleScroll = () => setScrollY(window.scrollY);
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    const sections = document.querySelectorAll<HTMLElement>("section[id]");
+   
+    const observer = new IntersectionObserver(
+      (entries) => {
+        let maxRatio = 0;
+        let activeId: string | null = null;
+
+        entries.forEach((entry) => {         
+          if (entry.intersectionRatio > maxRatio) {
+            maxRatio = entry.intersectionRatio;
+            activeId = entry.target.id;
+          }
+        });
+
+        if (activeId) {
+          setActiveSection(activeId);
+        }
+      },
+      {
+        rootMargin: "-20% 0px -40% 0px", // adjust
+        threshold: [0, 0.1, 0.25, 0.5, 0.75, 1.0],
+      }
+    );
+
+    sections.forEach((section) => {
+      observer.observe(section);
+    });
+
+    return () => {
+      observer.disconnect();
+    };
   }, []);
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      {/* Hero Section */}
+      <FloatingHeader activeSection={activeSection} />
+
       <HeroSection />
-
-      {/* About Section */}
       <AboutSection />
-
-      {/* Portfolio Section */}
-      <ProjectsSection />
-
-      {/* Experience Section */}
-      <ExperienceSection />
-
-      {/* Services Section */}
       <ServicesSection />
-
-      {/* CTA Section */}
+      <ExperienceSection />
+      <ProjectsSection />
       <CTASection />
-
-      {/* Footer */}
       <Footer />
     </div>
   );

@@ -26,7 +26,7 @@ const SERVICES_DATA = [
 
 export function ServicesSection() {
   return (
-    <section className="py-16 md:py-24 px-6">
+    <section id="services" className="scroll-mt-0 py-10 md:py-24 px-6">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-audiowide mb-6">What I Offer</h2>

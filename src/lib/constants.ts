@@ -306,7 +306,7 @@ export const PORTFOLIO_DATA = {
       liveUrl:
         "https://delightplus-portfolio.vercel.app/frontend-mentor-challenges/index.html",
       githubUrl: "https://github.com/DeLightPlus/frontend-mentor-challenges",
-      featured: false,
+      featured: true,
     },
     {
       id: 10,

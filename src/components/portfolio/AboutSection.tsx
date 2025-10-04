@@ -3,14 +3,13 @@
 
 import React from "react";
 import { PORTFOLIO_DATA } from "@/lib/constants";
-import { getSkillIcon } from "@/lib/utils";
 
 export function AboutSection() {
   const { skills, education } = PORTFOLIO_DATA;
   const flattenedSkills = skills.flatMap((category) => category.skills);
 
   return (
-    <section id="About" className="py-16 md:py-24 px-6 bw-gradient-bg">
+    <section id="about" className="scroll-mt-0 py-10 md:py-24 px-6 bw-gradient-bg">
       <div className="container mx-auto max-w-7xl">
         <div className="grid lg:grid-cols-3 gap-16">
           <div className="lg:col-span-2">
@@ -24,7 +23,7 @@ export function AboutSection() {
             </div>
 
             {/* Skills */}
-            <div>
+            <div id="skills" className="pt-4">
               <h3 className="text-2xl font-bold mb-8">Skills & Expertise</h3>
               <div className="space-y-6">
                 {flattenedSkills.map((skill) => {

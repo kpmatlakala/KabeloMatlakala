@@ -181,7 +181,7 @@ export function HeroSection() {
     return (
       <section
         id="home"
-        className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16"
+        className="scroll-mt-24 relative min-h-screen flex items-center justify-center overflow-hidden pt-16"
       >
         <BackgroundPattern />
         <div className="container mx-auto max-w-8xl relative z-10">
@@ -212,7 +212,7 @@ export function HeroSection() {
     return (
       <section
         id="home"
-        className="relative min-h-screen flex items-center justify-center overflow-hidden p-4"
+        className="scroll-mt-24 relative min-h-screen flex items-center justify-center overflow-hidden p-4"
       >
         <BackgroundPattern />
         <div className="container mx-auto max-w-4xl relative z-10">
@@ -304,7 +304,7 @@ export function HeroSection() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-4 py-4"
+      className="scroll-mt-24 relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-4 py-4"
     >
       <BackgroundPattern />
       <div className="container mx-auto max-w-md relative z-10 space-y-8">

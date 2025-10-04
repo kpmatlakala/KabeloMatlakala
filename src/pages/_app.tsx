@@ -6,7 +6,7 @@ import "../styles/globals.css";
 import "delightplus-ui/dist/styles.css";
 import { ThemeProvider } from "delightplus-ui";
 import { cn } from "@/lib/utils";
-import FloatingHeader from "@/components/Header/FloatingHeader";
+
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -30,10 +30,8 @@ export default function MyApp({ Component, pageProps }: AppProps) {
         <link rel="icon" href="/uploads/favicon.png?v=2" />
       </Head>
 
-      
       <div className={cn("font-montserrat", "theme-transition")}>
-        <ThemeProvider defaultTheme="system" storageKey="ui-theme">
-          <FloatingHeader logoFloating />
+        <ThemeProvider defaultTheme="system" storageKey="ui-theme">          
           <main>
             <Component {...pageProps} />
           </main>
