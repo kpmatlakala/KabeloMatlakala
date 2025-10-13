@@ -6,10 +6,10 @@ import React from 'react';
 import { Github, Linkedin, Twitter, Mail } from 'lucide-react';
 
 const SOCIAL_LINKS = [
-  { platform: "github", url: "https://github.com", icon: Github, label: "GitHub" },
-  { platform: "linkedin", url: "https://linkedin.com", icon: Linkedin, label: "LinkedIn" },
-  { platform: "twitter", url: "https://twitter.com", icon: Twitter, label: "Twitter" },
-  { platform: "email", url: "mailto:hello@designer.com", icon: Mail, label: "Email" }
+  { platform: "github", url: "https://github.com/kpmatlakala", icon: Github, label: "GitHub" },
+  { platform: "linkedin", url: "https://www.linkedin.com/in/kabelo-matlakala-704349273", icon: Linkedin, label: "LinkedIn" },
+  // { platform: "twitter", url: "https://twitter.com", icon: Twitter, label: "Twitter" },
+  { platform: "email", url: "mailto:matlakalakabelo1@gmail.com", icon: Mail, label: "Email" }
 ];
 
 export function Footer() {
@@ -25,7 +25,7 @@ export function Footer() {
             </p>
             <div className="flex items-center gap-2">
               <Mail className="h-5 w-5" />
-              <span className="font-medium">hello@designer.com</span>
+              <span className="font-medium">matlakalakabelo1@gmail.com</span>
             </div>
           </div>
           

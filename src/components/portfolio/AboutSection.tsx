@@ -97,7 +97,7 @@ export function AboutSection() {
               ))}
             </div>
 
-            <div className="mt-4 text-xs text-muted-foreground">
+            {/* <div className="mt-4 text-xs text-muted-foreground">
               <p className="font-medium">Focus:</p>
               <div className="flex gap-2">
                 <span
@@ -113,7 +113,7 @@ export function AboutSection() {
                   title="AI/ML"
                 ></span>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { ArrowRight, Download, ChevronDown } from "lucide-react";
+import { ArrowRight, Download, ChevronDown, Mail } from "lucide-react";
 import { PORTFOLIO_DATA } from "@/lib/constants";
 import { getSocialIcon } from "@/lib/utils";
 import Image from "next/image";
@@ -170,7 +170,15 @@ export function HeroSection() {
         <div className="hidden sm:block h-6 w-[1px] bg-border"></div>
         <div className="text-sm text-muted-foreground text-center sm:text-left">
           <p>Open for freelance & remote/onsite work</p>
-          <p className="text-foreground font-medium">{profile.email}</p>
+          <p className="text-foreground font-medium inline-flex items-center justify-center gap-1">
+            <a
+              href={`mailto:${profile.email}`}
+              className="hover:underline inline-flex items-center gap-1"
+            >
+              <Mail className="w-4 h-4" /> 
+              {profile.email}              
+            </a>
+          </p>
         </div>
       </div>
     </div>

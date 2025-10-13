@@ -201,13 +201,26 @@ export const PORTFOLIO_DATA = {
       year: "2024",
       tech: ["React", "CSS", "OpenWeatherMap API"],
       status: "Live",
-      liveUrl:
-        "https://delightplus-portfolio.vercel.app/weather-app/index.html",
-      githubUrl: "https://github.com/DeLightPlus/weather-app",
+      liveUrl: "https://auroracast-weather.netlify.app/",
+      githubUrl: "https://github.com/kpmatlakala/AuroraCast",
       featured: true,
     },
     {
       id: 3,
+      title: "Frontend Mentor Challenges",
+      category: "UI/UX Design",
+      description:
+        "A collection of frontend mini-projects with responsive layouts, CSS animations, and clean UI design.",
+      image: "https://th.bing.com/th/id/OIP.IbDTC4_LJDzbVrj-stJIoQHaEK",
+      year: "2025",
+      tech: ["HTML", "CSS", "Javascript"],
+      status: "Live",
+      liveUrl:"https://kpm-frontendmentor.vercel.app/",
+      githubUrl: "https://github.com/kpmatlakala/Frontend-Mentor",
+      featured: true,
+    },
+    {
+      id: 4,
       title: "Todo List App",
       category: "Productivity",
       description:
@@ -221,7 +234,7 @@ export const PORTFOLIO_DATA = {
       featured: false,
     },
     {
-      id: 4,
+      id: 5,
       title: "Shopping List App",
       category: "Productivity",
       description:
@@ -236,7 +249,7 @@ export const PORTFOLIO_DATA = {
       featured: false,
     },
     {
-      id: 5,
+      id: 6,
       title: "Online Recipe App",
       category: "Web Development",
       description:
@@ -251,7 +264,7 @@ export const PORTFOLIO_DATA = {
       featured: false,
     },
     {
-      id: 6,
+      id: 7,
       title: "Restaurant Reservation App",
       category: "Full-Stack Development",
       description:
@@ -265,7 +278,7 @@ export const PORTFOLIO_DATA = {
       featured: true,
     },
     {
-      id: 7,
+      id: 8,
       title: "Hotel Booking App",
       category: "Full-Stack Development",
       description:
@@ -279,7 +292,7 @@ export const PORTFOLIO_DATA = {
       featured: false,
     },
     {
-      id: 8,
+      id: 9,
       title: "Travel Planner App",
       category: "Full-Stack Development",
       description:
@@ -293,50 +306,36 @@ export const PORTFOLIO_DATA = {
       githubUrl: "https://github.com/DeLightPlus/travel-planner",
       featured: false,
     },
-    {
-      id: 9,
-      title: "Frontend Mentor Challenges",
-      category: "UI/UX Design",
-      description:
-        "A collection of frontend mini-projects with responsive layouts, CSS animations, and clean UI design.",
-      image: "https://th.bing.com/th/id/OIP.IbDTC4_LJDzbVrj-stJIoQHaEK",
-      year: "2025",
-      tech: ["HTML", "CSS"],
-      status: "Live",
-      liveUrl:
-        "https://delightplus-portfolio.vercel.app/frontend-mentor-challenges/index.html",
-      githubUrl: "https://github.com/DeLightPlus/frontend-mentor-challenges",
-      featured: true,
-    },
-    {
-      id: 10,
-      title: "Web Portfolio Challenge",
-      category: "Web Design",
-      description:
-        "Responsive personal portfolio site with interactive layout, animations, and modern navigation.",
-      image: "/portfolio-challenge/screenshot/ui-challenge_shots.png",
-      year: "2025",
-      tech: ["HTML", "CSS", "JavaScript"],
-      status: "Live",
-      liveUrl:
-        "https://delightplus-portfolio.vercel.app/portfolio-challenge/index.html",
-      githubUrl: "https://github.com/DeLightPlus/portfolio-challenge",
-      featured: true,
-    },
-    {
-      id: 11,
-      title: "Mini Games Collection",
-      category: "Game Development",
-      description:
-        "Browser game collection including Tetris, Snake, and memory match — all built with vanilla JS.",
-      image: "/mini-games/banner.jpg",
-      year: "2025",
-      tech: ["HTML", "CSS", "JavaScript"],
-      status: "Live",
-      liveUrl: "https://delightplus-portfolio.vercel.app/mini-games/index.html",
-      githubUrl: "https://github.com/DeLightPlus/mini-games",
-      featured: false,
-    },
+    
+    // {
+    //   id: 10,
+    //   title: "Web Portfolio Challenge",
+    //   category: "Web Design",
+    //   description:
+    //     "Responsive personal portfolio site with interactive layout, animations, and modern navigation.",
+    //   image: "/portfolio-challenge/screenshot/ui-challenge_shots.png",
+    //   year: "2025",
+    //   tech: ["HTML", "CSS", "JavaScript"],
+    //   status: "Live",
+    //   liveUrl:
+    //     "https://delightplus-portfolio.vercel.app/portfolio-challenge/index.html",
+    //   githubUrl: "https://github.com/DeLightPlus/portfolio-challenge",
+    //   featured: true,
+    // },
+    // {
+    //   id: 11,
+    //   title: "Mini Games Collection",
+    //   category: "Game Development",
+    //   description:
+    //     "Browser game collection including Tetris, Snake, and memory match — all built with vanilla JS.",
+    //   image: "/mini-games/banner.jpg",
+    //   year: "2025",
+    //   tech: ["HTML", "CSS", "JavaScript"],
+    //   status: "Live",
+    //   liveUrl: "https://delightplus-portfolio.vercel.app/mini-games/index.html",
+    //   githubUrl: "https://github.com/DeLightPlus/mini-games",
+    //   featured: false,
+    // },
   ],
 
   experience: [
