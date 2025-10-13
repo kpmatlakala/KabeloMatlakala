@@ -18,7 +18,7 @@ interface ProjectCardProps {
   isActive: boolean;
 }
 
-export function ProjectCard({ project, onHover, isActive }: ProjectCardProps) {
+export function ProjectCard({ project, onHover }: ProjectCardProps) {
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'Live': return 'bg-green-100 text-green-800';

@@ -11,7 +11,7 @@ export function CTASection() {
           Ready to Start Your Project?
         </h2>
         <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
-          Let's collaborate to transform your ideas into stunning digital experiences
+          Let&apos;s collaborate to transform your ideas into stunning digital experiences
           that engage users and drive results.
         </p>
 

@@ -21,7 +21,7 @@ export function ExperienceSection() {
         <div className="space-y-12 relative">
           <div className="absolute left-4 top-0 bottom-0 w-1 bg-border rounded-full"></div>
 
-          {PORTFOLIO_DATA.experience.map((job, index) => (
+          {PORTFOLIO_DATA.experience.map((job) => (
             <div key={job.id} className="relative pl-12 md:pl-16">
               {/* Timeline dot */}
               <div className="absolute left-2 top-3 w-4 h-4 bg-primary border-4 border-background rounded-full shadow-sm z-10"></div>

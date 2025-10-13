@@ -3,22 +3,24 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, Settings, ArrowRight, Download, Box } from "lucide-react";
+import { Menu, 
+  // Settings, ArrowRight, Download, Box 
+} from "lucide-react";
 
 import {
   Button,
-  Drawer,
-  DrawerTrigger,
-  DrawerContent,
-  DrawerHeader,
-  DrawerTitle,
-  DrawerFooter,
+  // Drawer,
+  // DrawerTrigger,
+  // DrawerContent,
+  // DrawerHeader,
+  // DrawerTitle,
+  // DrawerFooter,
 } from "delightplus-ui";
 
-import { ThemeToggle } from "../ToggleTheme";
+// import { ThemeToggle } from "../ToggleTheme";
 
 interface NavbarProps {
-  activeSection: string;  // Make non-optional for simplicity
+  activeSection: string; // Make non-optional for simplicity
 }
 
 export default function FloatingHeader({ activeSection }: NavbarProps) {
@@ -52,8 +54,18 @@ export default function FloatingHeader({ activeSection }: NavbarProps) {
     <nav className="fixed top-0 w-full z-50 transition-all duration-500 ease-out">
       <div className="container mx-auto flex justify-between items-center py-4 px-6">
         {/* Logo */}
-        <div className={`transition-all duration-300 ${isScrolled ? "scale-95 bg-background/40 backdrop-blur-md p-1" : "scale-100"}`}>
-          <Link href="/" onClick={handleLogoClick} className="flex items-center gap-2 group">
+        <div
+          className={`transition-all duration-300 ${
+            isScrolled
+              ? "scale-95 bg-background/40 backdrop-blur-md p-1"
+              : "scale-100"
+          }`}
+        >
+          <Link
+            href="/"
+            onClick={handleLogoClick}
+            className="flex items-center gap-2 group"
+          >
             <span className="logo-float metallic-text neon-glow font-audiowide text-primary text-3xl">
               KPM
             </span>
@@ -62,7 +74,13 @@ export default function FloatingHeader({ activeSection }: NavbarProps) {
 
         {/* Desktop Navigation */}
         <div className="hidden lg:flex items-center gap-2">
-          <div className={`${isScrolled ? "bg-background/50 backdrop-blur-md px-1 py-2" : "bg-background/5 backdrop-blur-sm shadow-lg px-2 py-3"} rounded-full border border-border/20 transition-all duration-300`}>
+          <div
+            className={`${
+              isScrolled
+                ? "bg-background/50 backdrop-blur-md px-1 py-2"
+                : "bg-background/5 backdrop-blur-sm shadow-lg px-2 py-3"
+            } rounded-full border border-border/20 transition-all duration-300`}
+          >
             <nav>
               <ul className="flex gap-1">
                 {navLinks.map((link) => {
@@ -72,9 +90,10 @@ export default function FloatingHeader({ activeSection }: NavbarProps) {
                       <a
                         href={link.href}
                         className={`px-4 py-2 text-sm rounded-full transition-all duration-300 relative group border-b-2
-                          ${isActive
-                            ? "text-primary border-primary"
-                            : "border-transparent text-foreground/80 hover:text-primary hover:border-primary/60"
+                          ${
+                            isActive
+                              ? "text-primary border-primary"
+                              : "border-transparent text-foreground/80 hover:text-primary hover:border-primary/60"
                           }`}
                       >
                         <span className="relative z-10">{link.name}</span>
@@ -89,7 +108,7 @@ export default function FloatingHeader({ activeSection }: NavbarProps) {
 
         {/* Mobile (Drawer) */}
         <div className="flex items-center gap-3">
-          <Drawer>
+          {/* <Drawer>
             <DrawerTrigger asChild>
               <Button
                 variant="ghost"
@@ -160,7 +179,15 @@ export default function FloatingHeader({ activeSection }: NavbarProps) {
                 </Button>
               </DrawerFooter>
             </DrawerContent>
-          </Drawer>
+          </Drawer> */}
+          <Button
+            variant="ghost"
+            size="icon"
+            className="text-foreground bg-background/40 backdrop-blur-md rounded-full border border-border/20 shadow-lg hover:bg-background/60"
+            aria-label="Open menu"
+          >
+            <Menu size={20} />
+          </Button>
         </div>
       </div>
     </nav>

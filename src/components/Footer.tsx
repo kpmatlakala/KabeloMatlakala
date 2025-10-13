@@ -3,12 +3,14 @@
 "use client";
 
 import React from 'react';
-import { Github, Linkedin, Twitter, Mail } from 'lucide-react';
+import { 
+  Github, 
+  Linkedin, 
+   Mail } from 'lucide-react';
 
 const SOCIAL_LINKS = [
   { platform: "github", url: "https://github.com/kpmatlakala", icon: Github, label: "GitHub" },
   { platform: "linkedin", url: "https://www.linkedin.com/in/kabelo-matlakala-704349273", icon: Linkedin, label: "LinkedIn" },
-  // { platform: "twitter", url: "https://twitter.com", icon: Twitter, label: "Twitter" },
   { platform: "email", url: "mailto:matlakalakabelo1@gmail.com", icon: Mail, label: "Email" }
 ];
 
@@ -18,9 +20,9 @@ export function Footer() {
       <div className="container mx-auto max-w-6xl">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <h3 className="text-2xl font-bold mb-4">Let's Work Together</h3>
+            <h3 className="text-2xl font-bold mb-4">Let&apos;s Work Together</h3>
             <p className="text-primary-foreground/80 mb-6 leading-relaxed">
-              Ready to bring your vision to life? I'm always excited to work on new projects
+              Ready to bring your vision to life? I&apos;m always excited to work on new projects
               and collaborate with passionate teams.
             </p>
             <div className="flex items-center gap-2">
@@ -46,7 +48,7 @@ export function Footer() {
               })}
             </div>
             <p className="text-primary-foreground/60 text-sm">
-              © 2024 Designer Portfolio. All rights reserved.
+              &copy; 2024 <a href="#" className="underline hover:text-foreground">Kabelo Matlakala</a>. All rights reserved.
             </p>
           </div>
         </div>
